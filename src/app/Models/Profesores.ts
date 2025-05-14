@@ -1,4 +1,4 @@
-export interface Profesor{
+export interface Profesores{
      id : number;
      nombre :  string;
 
