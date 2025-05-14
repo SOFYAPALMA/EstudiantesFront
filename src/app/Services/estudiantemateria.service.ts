@@ -15,7 +15,7 @@ export class EstudianteMateriaService {
 
   constructor(private httpClient: HttpClient) {}
 
-  // metodo para solicitud tipo Get que trae la lista de EstudianteMateria
+  // Metodo para solicitud tipo Get que trae la lista de EstudianteMateria
   lista() {
     return this.http.get<RespuestaAPI>(this.apiUrl + 'ConsultarEstMat');
   }
