@@ -4,6 +4,7 @@ import { AuthGuard } from './core/guard/auth.guard';
 import { NuevoEstudianteComponent } from './Pages/nuevoestudiante/nuevoestudiante.component';
 import { EstudiantesComponent } from './Pages/estudiantes/estudiantes.component';
 import { AsociarMateriaComponent } from './Pages/asociar-materia/asociar-materia.component';
+import { EstudiantesDetalleComponent } from './Pages/estudiantesdetalle/estudiantesdetalle.component';
 
 
 export const routes: Routes = [
@@ -11,6 +12,7 @@ export const routes: Routes = [
   { path: 'nuevoestudiante', canActivate: [AuthGuard], component: NuevoEstudianteComponent },
   { path: 'estudiantes', canActivate: [AuthGuard], component: EstudiantesComponent },
   { path: 'asociar-materia', canActivate: [AuthGuard], component: AsociarMateriaComponent },
+  { path: 'estudiantesdetalle', canActivate: [AuthGuard], component: EstudiantesDetalleComponent },
   { path: 'login', component: LoginComponent },
   
     

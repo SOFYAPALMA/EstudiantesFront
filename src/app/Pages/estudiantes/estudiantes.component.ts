@@ -81,9 +81,9 @@ export class EstudiantesComponent implements OnInit, AfterViewInit {
     });
   }
 
-  ver(obj: Estudiantes) {
-    console.log('id');
-    this.router.navigate(['editar-estudiantes'], { queryParams: { id: obj } });
+  ver(name: string) {
+    console.log('id',name);
+    this.router.navigate(['estudiantesdetalle'], { queryParams: { id: name } });
   }
   nuevo() {
     this.router.navigate(['asociar-materia']);

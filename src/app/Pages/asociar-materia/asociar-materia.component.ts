@@ -1,9 +1,10 @@
-import { Component,
+import { Component, 
   inject,
   OnInit } from '@angular/core';
 import { EstudiantesService } from '../../Services/estudiantes.service';
 import { MateriaService } from '../../Services/materia.service';
 import { MatSelectModule } from '@angular/material/select';
+import { CommonModule } from '@angular/common';
 import { Estudiantes } from '../../Models/Estudiantes';
 import { Materia } from '../../Models/Materia';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -26,6 +27,7 @@ import { MatDialogModule } from '@angular/material/dialog';
      MatCardModule,
         MatPaginatorModule,
         MatFormFieldModule,
+        CommonModule,
         MatTableModule,
         MatButtonModule,
         MatSortModule,
@@ -70,6 +72,7 @@ export class AsociarMateriaComponent implements OnInit {
   cargarMaterias() {
     this.materiaService.lista().subscribe({
       next: (res) => {
+        console.log('Respuesta materias:', res);
         if (res.success && res.data) {
           this.listaMaterias = res.data;
         }

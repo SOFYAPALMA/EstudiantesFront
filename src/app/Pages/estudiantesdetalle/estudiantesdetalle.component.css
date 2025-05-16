@@ -1,0 +1,21 @@
+.retornar-btn {
+    background-color:rgba(6, 80, 190, 0.945)!important;
+    color: white !important;
+  }
+  
+  .nuevo-comentario-btn {
+    background-color:rgba(66, 59, 80, 0.945)!important;
+    color: white !important;
+  }
+  
+  /* Estilo para el espacio entre botones */
+  .btn-space {
+    margin-left: 10px;
+  }
+
+.titulo-centrado {
+  text-align: center;
+  justify-content: center;
+}
+
+

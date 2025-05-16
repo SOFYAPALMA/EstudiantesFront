@@ -1,0 +1,40 @@
+<mat-card style="width: 55%; margin: 20px auto">
+  <mat-card-header
+    style="background-color: #0f4686; color: rgb(247, 250, 252)"
+  >
+    <mat-card-title><h1>Estudiantes</h1></mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="header-container">
+      <h2>Detalles de Estudiantes</h2>
+    </div>
+
+    <div class="book-card">
+      <mat-card class="mat-elevation-z8" style="margin: 15px 0">
+        <div>
+          <h3>Nombre : {{ estudiantesid?.nombre }}</h3>   
+        </div>
+      </mat-card>
+    </div>
+
+    <h3>Profesores:</h3>
+<ul>
+  <li *ngFor="let profesor of estudiantesid?.profesores">
+    {{ profesor.nombre }}
+  </li>
+</ul>
+
+<h3>Materias:</h3>
+<ul>
+  <li *ngFor="let materia of estudiantesid?.materia">
+    {{ materia.nombreMateria }}
+  </li>
+</ul>
+  </mat-card-content>
+  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-3 text-right">   
+    <button type="button" mat-raised-button class="retornar-btn" (click)="retornar()">Retornar</button>
+    <!-- //<button class="btn-space nuevo-comentario-btn" mat-raised-button (click)="asciar()">Nuevo Comentario</button> -->
+  </div>
+  <br>
+</mat-card>
+

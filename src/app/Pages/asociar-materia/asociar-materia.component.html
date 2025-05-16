@@ -18,7 +18,7 @@
       <mat-label>Seleccionar Materia</mat-label>
       <mat-select [(value)]="materiaSeleccionadaId">
         <mat-option *ngFor="let materia of listaMaterias" [value]="materia.id">
-          {{ materia.nombre }} - Créditos: {{ materia.creditos }}
+          {{ materia.nombreMateria }} - Créditos: 3
         </mat-option>
       </mat-select>
     </mat-form-field>

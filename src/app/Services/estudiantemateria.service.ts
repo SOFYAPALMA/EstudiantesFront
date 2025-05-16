@@ -4,7 +4,6 @@ import { appsettings } from '../Settings/appsettings';
 import { RespuestaAPI } from '../Models/RespuestaAPI';
 
 import { catchError, Observable, throwError } from 'rxjs';
-import { EstudianteMateria } from '../Models/EstudianteMateria';
 
 @Injectable({
   providedIn: 'root',
@@ -38,7 +37,7 @@ export class EstudianteMateriaService {
     materiaId: string;
   }): Observable<RespuestaAPI> {
     return this.http.post<RespuestaAPI>(
-      `${this.apiUrl}AsociarMateria`,
+      `${this.apiUrl}AsociarMateriaEstudiante`,
       payload
     );
   }
