@@ -34,7 +34,7 @@ export class EstudiantesService {
   }
 
     //metodo tipo post para crear Estudiante
-    crear(value: Estudiantes): Observable<RespuestaAPI> {
+    nuevoEstudiante(value: Estudiantes): Observable<RespuestaAPI> {
     console.log('nuevo Estudiante', value);
 
     const httpOptions = {

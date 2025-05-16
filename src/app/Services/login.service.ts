@@ -10,7 +10,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   providedIn: 'root'
 })
 export class AuthService {
-  private readonly API_URL = 'https://localhost:7108/api/Auth';
+  private readonly API_URL = 'https://localhost:7108';
   private currentUser: any = null;
 
   constructor(
@@ -43,7 +43,7 @@ export class AuthService {
           this.API_URL +
             '/Validate?correo=' +
             usuario.correo +
-            '&clave=' +
+            '&password=' +
             usuario.password,
           {}
         )
@@ -57,8 +57,8 @@ export class AuthService {
   
   logout() {
     // Limpiar datos de sesión
-    localStorage.removeItem('token');
-    localStorage.removeItem('userData');
+    //localStorage.removeItem('token');
+    //localStorage.removeItem('userData');
 
     // Notificación
     this.snackBar.open('Sesión cerrada correctamente', 'Cerrar', {

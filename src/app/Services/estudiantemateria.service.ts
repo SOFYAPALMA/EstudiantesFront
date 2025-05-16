@@ -32,4 +32,14 @@ export class EstudianteMateriaService {
         })
       );
   }
+
+  asociarMateria(payload: {
+    estudianteId: string;
+    materiaId: string;
+  }): Observable<RespuestaAPI> {
+    return this.http.post<RespuestaAPI>(
+      `${this.apiUrl}AsociarMateria`,
+      payload
+    );
+  }
 }

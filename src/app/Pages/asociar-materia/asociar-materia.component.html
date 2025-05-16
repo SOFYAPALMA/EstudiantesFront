@@ -1,0 +1,31 @@
+<mat-card style="width: 40%; margin: 50px auto">
+  <mat-card-header style="background-color: #4d31a1; color: white">
+    <mat-card-title><h2>Asociar Materia a Estudiante</h2></mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+
+    <mat-form-field appearance="fill" style="width: 100%">
+      <mat-label>Seleccionar Estudiante</mat-label>
+      <mat-select [(value)]="estudianteSeleccionadoId">
+        <mat-option *ngFor="let estudiante of listaEstudiantes" [value]="estudiante.id">
+          {{ estudiante.nombre }} ({{ estudiante.correo }})
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" style="width: 100%">
+      <mat-label>Seleccionar Materia</mat-label>
+      <mat-select [(value)]="materiaSeleccionadaId">
+        <mat-option *ngFor="let materia of listaMaterias" [value]="materia.id">
+          {{ materia.nombre }} - Créditos: {{ materia.creditos }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="asociarMateria()" [disabled]="!estudianteSeleccionadoId || !materiaSeleccionadaId">
+      Asociar Materia
+    </button>
+
+  </mat-card-content>
+</mat-card>
