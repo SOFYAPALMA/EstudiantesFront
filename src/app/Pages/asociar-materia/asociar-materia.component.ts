@@ -50,10 +50,13 @@ export class AsociarMateriaComponent implements OnInit {
 
   estudianteSeleccionadoId: string = '';
   materiaSeleccionadaId: string = '';
+  router: any;
 
   ngOnInit(): void {
     this.cargarEstudiantes();
-    this.cargarMaterias();
+    this.cargarMaterias(); 
+    console.log('Respuesta estudiante 2:', this.listaEstudiantes);
+    console.log('Respuesta materias 2:', this.listaMaterias);
   }
 
   cargarEstudiantes() {
@@ -75,6 +78,7 @@ export class AsociarMateriaComponent implements OnInit {
         console.log('Respuesta materias:', res);
         if (res.success && res.data) {
           this.listaMaterias = res.data;
+          console.log('Respuesta materias int:', this.listaMaterias);
         }
       },
       error: (err) => {
@@ -110,4 +114,8 @@ export class AsociarMateriaComponent implements OnInit {
       },
     });
   }
+  // retornar() {
+  //   this.router.navigate(['estudiantes'], { queryParams: { 
+  //   } });
+  // }
 }
